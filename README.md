@@ -14,4 +14,4 @@ The toll collector service has one RPC or endpoint that you can call:
   
 Your app can publish its Stellar toll address for payments. When someone tries to use your service, the server has them authenticate their public key and calls `charge` on the Toll Collector to decrements the consumer’s balance in the DB. You can send the consumer a message when their balance is zero.
 
-Referenced from [https://www.stellar.org/developers/guides/things-to-build.html#resource-paywall](Build Stellar Apps)
+Referenced from [Build Stellar Apps - Resource Paywall](https://www.stellar.org/developers/guides/things-to-build.html#resource-paywall)
