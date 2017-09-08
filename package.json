@@ -1,0 +1,22 @@
+{
+  "name": "stellar-tollcollector",
+  "version": "1.0.0",
+  "description": "## Resource Paywall Let’s say you have a public-facing service, perhaps for streaming or open wifi. You want to allow other people to use this service if they pay you small amounts. These payments could be used as spam prevention or to support your business. This is a job for the **toll collector**…",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xaviablaza/stellar-tollcollector.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xaviablaza/stellar-tollcollector/issues"
+  },
+  "homepage": "https://github.com/xaviablaza/stellar-tollcollector#readme",
+  "devDependencies": {
+    "stellar-sdk": "^0.7.3"
+  }
+}
