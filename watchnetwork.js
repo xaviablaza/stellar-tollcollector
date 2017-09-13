@@ -1,7 +1,7 @@
 var StellarSdk = require('stellar-sdk');
 
 var server = new StellarSdk.Server('https://horizon-testnet.stellar.org');
-var accountId = 'GC4P7ZKVYLTT3UQUZR6K5PTH5D5QNGVNJNDEF6PY56WWLIBOC2OFYXMQ';
+var accountId = 'GC76GFDPL4TY2DIQPN53KFFSM2AJHBHOTETNUNRVXVH3HT7QRYRZR64F';
 
 // Create an API call to query payments involving the account.
 var payments = server.payments().forAccount(accountId);

@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/xaviablaza/stellar-tollcollector#readme",
   "devDependencies": {
+    "request": "^2.81.0",
     "stellar-sdk": "^0.7.3"
+  },
+  "dependencies": {
+    "qrcode": "^0.9.0"
   }
 }
