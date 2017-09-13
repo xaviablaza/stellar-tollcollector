@@ -3,7 +3,7 @@ StellarSdk.Network.useTestNetwork();
 var server = new StellarSdk.Server('https://horizon-testnet.stellar.org');
 var sourceKeys = StellarSdk.Keypair
   .fromSecret('SDPSMHIBHBTZCAVGYLXHGQICF2ONHIUBBM6SC3SCTENAZVMSIAW3U4YV');
-var destinationId = 'GC4P7ZKVYLTT3UQUZR6K5PTH5D5QNGVNJNDEF6PY56WWLIBOC2OFYXMQ';
+var destinationId = 'GBIFU7RVRSMULSMZQIPBXCSLSFWXBBLPPOKGW6SVVUO42RFHYFDNOYFO';
 
 // Get each account's details and check its balance(s)
     var server = new StellarSdk.Server('https://horizon-testnet.stellar.org');
