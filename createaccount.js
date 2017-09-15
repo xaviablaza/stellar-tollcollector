@@ -4,6 +4,7 @@ var server = new StellarSdk.Server('https://horizon-testnet.stellar.org');
 
 // Account that will have funds to fund the newly created account
 var source_account = StellarSdk.Keypair.random();
+console.log(source_account.secret());
 
 // Fund the source account with funds from friendbot
 var request = require('request');
@@ -31,7 +32,7 @@ request.get({
     // this operation funds the new account with XLM
         .addOperation(StellarSdk.Operation.createAccount({
             destination: new_account.publicKey(),
-            startingBalance: "20"
+            startingBalance: "100"
         }))
         .build();
 
@@ -39,9 +40,10 @@ request.get({
 
     server.submitTransaction(transaction)
         .then(function (transactionResult) {
-            console.log(transactionResult);account
+            console.log(transactionResult);
             server.loadAccount(new_account.publicKey()).then((account) => {
                 console.log('Balances for new_account: ' + new_account.publicKey());
+                console.log(new_account.secret());
             account.balances.forEach((balance) => {
                 console.log('Type:', balance.asset_type, ', Balance:', balance.balance);
         });
