@@ -8,6 +8,8 @@ https://learn.adafruit.com/networked-thermal-printer-using-cups-and-raspberry-pi
 https://www.adafruit.com/product/597
 
 Using `lpr` is very unreliable so using this library instead works out just fine.
+`pip install stellar-base`
+`pip install qrcode`
 
 ## What does it do
 
