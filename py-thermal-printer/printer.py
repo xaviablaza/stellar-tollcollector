@@ -401,7 +401,7 @@ if __name__ == '__main__':
         sys.exit("ERROR: Serial port not found at: %s" % serialport)
 
     print "Testing printer on port %s" % serialport
-#    p = ThermalPrinter(serialport=serialport)
+    p = ThermalPrinter(serialport=serialport)
 #    p.print_text("\nHello maailma. How's it going?\n")
 #    p.print_text("Part of this ")
 #    p.bold()
@@ -430,17 +430,35 @@ if __name__ == '__main__':
 #    p.print_markup(markup)
 
     # runtime dependency on Python Imaging Library
-    from PIL import Image
-    i = Image.open("example-lammas.png")
-    data = list(i.getdata())
-    w, h = i.size
-    p.print_bitmap(data, w, h, True)
+#    from PIL import Image
+#    i = Image.open("example-lammas.png")
+#    data = list(i.getdata())
+#    w, h = i.size
+#    p.print_bitmap(data, w, h, True)
 
-    img = qrcode.make('SOME DATA HERE')
+    # Generate key
+    kp = Keypair.random()
+    publickey = kp.address().decode()
+    secretkey = kp.seed().decode()
+
+    p.font_b()
+    p.print_text("PUBLIC KEY\n")
+    img = qrcode.make(publickey)
     datatest = list(img.getdata())
     w1, h1, = img.size
     p.print_bitmap(datatest, w1, h1, True)
-
+    p.font_b(False)
+    p.print_text(publickey + '\n')
+    p.print_text("--------------------------\n")
+    p.font_b()
+    p.print_text("PRIVATE KEY\n")
+    img = qrcode.make(secretkey)
+    datatest = list(img.getdata())
+    w1, h1, = img.size
+    p.print_bitmap(datatest, w1, h1, True)
+    p.font_b(False)
+    p.print_text(secretkey + '\n')
+    p.print_text("DO NOT LOSE OR SHARE THIS PRIVATE KEY!")
 
 #    p.linefeed()
 #    p.justify("C")
