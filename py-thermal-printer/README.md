@@ -1,5 +1,15 @@
-Python Thermal Printer Library
-==============================
+# Python Thermal Printer Library
+
+## Installation
+`pip install afthermal`
+Used a Raspberry Pi 2 Model B V1.1
+Adafruit Mini Printer
+https://learn.adafruit.com/networked-thermal-printer-using-cups-and-raspberry-pi/overview
+https://www.adafruit.com/product/597
+
+Using `lpr` is very unreliable so using this library instead works out just fine.
+
+## What does it do
 
 Thermal printing library that controls the "micro panel thermal printer" sold in
 shops like Adafruit and Sparkfun (e.g. http://www.adafruit.com/products/597). 
