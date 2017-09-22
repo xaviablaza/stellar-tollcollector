@@ -430,7 +430,7 @@ if __name__ == '__main__':
 #    p.print_markup(markup)
 
     # runtime dependency on Python Imaging Library
-#    from PIL import Image
+    from PIL import Image
 #    i = Image.open("example-lammas.png")
 #    data = list(i.getdata())
 #    w, h = i.size
