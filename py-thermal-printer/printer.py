@@ -443,17 +443,7 @@ if __name__ == '__main__':
 
     p.font_b()
     p.print_text("PUBLIC KEY\n")
-    qr = qrcode.QRCode(
-        version=None,
-        error_correction=qrcode.constants.ERROR_CORRECT_L,
-        box_size=10,
-        border=4,
-    )
-    qr.add_data(publickey)
-    qr.make(fit=True)
-
-    img = qr.make_image()
-    #img = qrcode.make(publickey)
+    img = qrcode.make(publickey)
     datatest = list(img.getdata())
     w1, h1, = img.size
     p.print_bitmap(datatest, w1, h1, False)
@@ -468,6 +458,7 @@ if __name__ == '__main__':
     p.print_bitmap(datatest, w1, h1, False)
     p.print_text(secretkey + '\n')
     p.justify("C")
+    p.linefeed(1)
     p.print_text("DO NOT LOSE OR SHARE THIS PRIVATE KEY!")
     p.linefeed(6)
 #    p.linefeed()
