@@ -443,8 +443,8 @@ if __name__ == '__main__':
 
     p.font_b()
     p.print_text("PUBLIC KEY\n")
-    img = img.resize((185,185))
     img = qrcode.make(publickey)
+    img = img.resize((185,185))
     datatest = list(img.getdata())
     w1, h1, = img.size
     p.print_bitmap(datatest, w1, h1, False)
@@ -453,8 +453,8 @@ if __name__ == '__main__':
     p.print_text("--------------------------------\n")
     p.font_b()
     p.print_text("PRIVATE KEY\n")
-    img = img.resize((185,185))
     img = qrcode.make(secretkey)
+    img = img.resize((185,185))
     datatest = list(img.getdata())
     w1, h1, = img.size
     p.print_bitmap(datatest, w1, h1, False)
