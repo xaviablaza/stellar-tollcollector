@@ -349,7 +349,7 @@ class ThermalPrinter(object):
             test_img = Image.new('RGB', (384, h))
             draw = ImageDraw.Draw(test_img)
 
-        self.linefeed()
+        #self.linefeed()
 
         black_and_white_pixels = self.convert_pixel_array_to_binary(pixels, w, h)
         print_bytes = []
@@ -443,6 +443,7 @@ if __name__ == '__main__':
 
     p.font_b()
     p.print_text("PUBLIC KEY\n")
+    img = img.resize((185,185))
     img = qrcode.make(publickey)
     datatest = list(img.getdata())
     w1, h1, = img.size
@@ -452,6 +453,7 @@ if __name__ == '__main__':
     p.print_text("--------------------------------\n")
     p.font_b()
     p.print_text("PRIVATE KEY\n")
+    img = img.resize((185,185))
     img = qrcode.make(secretkey)
     datatest = list(img.getdata())
     w1, h1, = img.size
