@@ -462,7 +462,7 @@ if __name__ == '__main__':
     p.justify("C")
     p.linefeed(1)
     p.print_text("DO NOT LOSE OR SHARE THIS PRIVATE KEY!")
-    p.linefeed(6)
+    p.linefeed(4)
 #    p.linefeed()
 #    p.justify("C")
 #    p.barcode_chr("2")
