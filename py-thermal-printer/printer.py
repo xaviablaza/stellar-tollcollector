@@ -445,21 +445,20 @@ if __name__ == '__main__':
     p.print_text("PUBLIC KEY\n")
     img = qrcode.make(publickey)
     datatest = list(img.getdata())
-    w1, h1, = img.size
+    w1, h1, = img.size/2
     p.print_bitmap(datatest, w1, h1, True)
-    p.font_b(False)
     p.print_text(publickey + '\n')
-    p.print_text("--------------------------\n")
+    p.font_b(False)
+    p.print_text("--------------------------------\n")
     p.font_b()
     p.print_text("PRIVATE KEY\n")
     img = qrcode.make(secretkey)
     datatest = list(img.getdata())
     w1, h1, = img.size
     p.print_bitmap(datatest, w1, h1, True)
-    p.font_b(False)
     p.print_text(secretkey + '\n')
     p.print_text("DO NOT LOSE OR SHARE THIS PRIVATE KEY!")
-
+    p.linefeed(3)
 #    p.linefeed()
 #    p.justify("C")
 #    p.barcode_chr("2")
