@@ -441,6 +441,10 @@ if __name__ == '__main__':
     publickey = kp.address().decode()
     secretkey = kp.seed().decode()
 
+    stellar_logo = Image.open("STELLAR-logo.png")
+    data = list(stellar_logo.getdata())
+    w,h = stellar_logo.size
+    p.print_bitmap(data,w,h)
     p.font_b()
     p.print_text("PUBLIC KEY\n")
     img = qrcode.make(publickey)
